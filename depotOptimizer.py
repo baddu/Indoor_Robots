@@ -1,5 +1,5 @@
 import robotTourUtil as rtu
-
+# main file?
 G = rtu.nx.Graph()
 rtu.data_parser(G, rtu.matrix_input)
 number_of_nodes = len(list(G.nodes))
