@@ -7,6 +7,9 @@ import warnings
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
+###################  USER INUPUT ##############################################
+# undirected graph network elements
+# [node1, node2, edge_length]
 matrix_input = [[0, 1, 9.8], [0, 3, 2],
                 [1, 2, 3.5], [1, 7, 2.7],
                 [2, 12, 5.5],
@@ -30,6 +33,7 @@ matrix_input = [[0, 1, 9.8], [0, 3, 2],
                 [24, 25, 5.8],
                 [25, 26, 2.2]
                 ]
+###############################################################################
 
 
 def data_parser(networkx_graph, matrix):
@@ -338,6 +342,7 @@ def MmTSP(list_of_nodes, depots_node, number_of_robots, networkx_graph, minMaxRe
         return "SMG"
     # sort depot groups by length
     depot_groups.sort(key=len, reverse=True)
+    print("The unique depot node solution is:")
     print(depot_groups)
     # ensure the minimum number of element for each depot group
     for i in range(len(depot_groups)):
